@@ -1,0 +1,7 @@
+C:\Users\roybi\Desktop\영상처리\imgproc_20181369\x64\Debug\imgproc_20181369.exe
+F:\imgproc_20181369\x64\Debug\imgproc_20181369.exe
+D:\imgproc_20181369\x64\Debug\imgproc_20181369.exe
+C:\Users\neoly\Desktop\imgproc_20191373\x64\Debug\imgproc_20191373.exe
+C:\Users\neoly\Downloads\imgproc_20191373\imgproc_20191373\x64\Debug\imgproc_20191373.exe
+D:\영상처리20191373\imgproc_20191373\imgproc_20191373\x64\Debug\imgproc_20191373.exe
+F:\영상처리20191373\imgproc_20191373\imgproc_20191373\x64\Debug\imgproc_20191373.exe
