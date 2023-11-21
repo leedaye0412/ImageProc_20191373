@@ -74,6 +74,9 @@ public:
 	afx_msg void OnGeometryZoomoutMeanSub();
 	afx_msg void OnGeometryZoomoutAvgSampling();
 	afx_msg void OnGeometryRotation();
+	afx_msg void OnGeometryMirror();
+	afx_msg void OnGeometryFlip();
+	afx_msg void OnGeometryWarping();
 };
 
 #ifndef _DEBUG  // imgproc_20191373View.cpp의 디버그 버전

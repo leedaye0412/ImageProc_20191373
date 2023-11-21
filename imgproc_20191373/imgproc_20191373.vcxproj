@@ -184,6 +184,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CAngleInputDialog.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="imgproc_20191373.h" />
@@ -195,6 +196,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAngleInputDialog.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="imgproc_20191373.cpp" />
     <ClCompile Include="imgproc_20191373Doc.cpp" />

@@ -1,66 +1,68 @@
 ﻿  imgproc_20191373View.cpp
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(293,34): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(301,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(307,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(313,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(336,34): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(344,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(350,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(356,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(400,46): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(411,12): warning C4101: 'value' :참조되지 않은 지역 변수입니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(471,37): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(507,39): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(548,43): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(564,50): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(565,54): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(566,54): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,28): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,35): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,42): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,58): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,65): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,74): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,81): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(594,88): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(648,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(655,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(656,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(657,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(659,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(716,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(723,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(724,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(725,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(727,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(784,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(791,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(792,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(793,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(795,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(928,6): warning C4101: 'gray' :참조되지 않은 지역 변수입니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1145,15): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1159,38): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1160,42): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1191,46): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1192,46): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1194,45): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1197,50): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1198,50): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1199,49): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1201,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1202,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1203,53): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1205,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1206,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1207,53): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1220,11): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1347,24): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1348,69): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1349,58): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1370,68): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1371,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1334,15): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-F:\영상처리20191373\imgproc_20191373\imgproc_20191373\imgproc_20191373View.cpp(1334,12): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-  imgproc_20191373.vcxproj -> F:\영상처리20191373\imgproc_20191373\imgproc_20191373\x64\Debug\imgproc_20191373.exe
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(298,34): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(306,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(312,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(318,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(341,34): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(349,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(355,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(361,42): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(405,46): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(416,12): warning C4101: 'value' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(476,37): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(512,39): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(553,43): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(569,50): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(570,54): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(571,54): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,28): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,35): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,42): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,58): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,65): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,74): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,81): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(599,88): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(653,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(660,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(661,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(662,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(664,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(721,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(728,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(729,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(730,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(732,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(789,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(796,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(797,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(798,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(800,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(933,6): warning C4101: 'gray' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1150,15): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1164,38): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1165,42): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1196,46): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1197,46): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1199,45): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1202,50): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1203,50): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1204,49): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1206,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1207,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1208,53): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1210,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1211,54): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1212,53): warning C4244: '=': 'float'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1225,11): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1357,24): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1358,69): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1359,58): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1380,68): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1381,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1340,15): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1340,12): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1544,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\imgproc_20191373\imgproc_20191373View.cpp(1545,17): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  imgproc_20191373.vcxproj -> C:\Users\User\Desktop\imgproc_20191373\x64\Debug\imgproc_20191373.exe
