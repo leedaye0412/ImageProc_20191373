@@ -15,6 +15,8 @@
 
 #include "CAngleInputDialog.h"
 
+#include <Vfw.h>
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -58,13 +60,16 @@ ON_COMMAND(ID_GEOMETRY_ROTATION, &Cimgproc20191373View::OnGeometryRotation)
 ON_COMMAND(ID_GEOMETRY_MIRROR, &Cimgproc20191373View::OnGeometryMirror)
 ON_COMMAND(ID_GEOMETRY_FLIP, &Cimgproc20191373View::OnGeometryFlip)
 ON_COMMAND(ID_GEOMETRY_WARPING, &Cimgproc20191373View::OnGeometryWarping)
+ON_WM_LBUTTONDOWN()
+ON_WM_LBUTTONUP()
+ON_COMMAND(ID_AVI_VIEW, &Cimgproc20191373View::OnAviView)
 END_MESSAGE_MAP()
 
 // Cimgproc20191373View 생성/소멸
 
 Cimgproc20191373View::Cimgproc20191373View() noexcept
 {
-	// TODO: 여기에 생성 코드를 추가합니다.
+	bAviMode = false;
 
 }
 
@@ -89,6 +94,15 @@ void Cimgproc20191373View::OnDraw(CDC* pDC)
 	if (!pDoc)
 		return;
 	int x, y;
+
+	if (bAviMode)
+	{
+		//avi화일재생
+		LoadAviFile(pDC);
+		bAviMode = false;
+		return;
+	}
+
 	if (pDoc->Inputimg != NULL)
 	{
 		if (pDoc->depth == 1) {//흑백영상출력
@@ -1459,6 +1473,9 @@ typedef struct //일반자료형
 	int Qy;
 }control_line;
 
+control_line mctrl_source = { 100,100,150,150 };
+control_line mctrl_dest = { 100,100,200,200 };
+
 void Cimgproc20191373View::OnGeometryWarping()
 {
 	Cimgproc20191373Doc* pDoc = GetDocument();
@@ -1469,6 +1486,9 @@ void Cimgproc20191373View::OnGeometryWarping()
 	control_line dest_lines[5] = { {100,100,200,200},
 		{0,0,pDoc->ImageWidth - 1,0},{pDoc->ImageWidth - 1,0,pDoc->ImageWidth - 1,pDoc->ImageHeight - 1}
 		,{pDoc->ImageWidth - 1,pDoc->ImageHeight - 1,0,pDoc->ImageHeight - 1},{0,pDoc->ImageHeight - 1,0,0} };
+
+	source_lines[0] = mctrl_source;
+	dest_lines[0] = mctrl_dest;
 
 	int x, y;
 
@@ -1531,7 +1551,7 @@ void Cimgproc20191373View::OnGeometryWarping()
 					(src_y2 - src_y1) * (src_y2 - src_y1));
 				
 				xp = src_x1 + u * (src_x2 - src_x1) - h * (src_y2 - src_y1) / src_line_length;
-				yp= src_y1 + u * (src_y2 - src_y1) + h * (src_x2 - src_x1) / src_line_length;
+				yp = src_y1 + u * (src_y2 - src_y1) + h * (src_x2 - src_x1) / src_line_length;
 
 				weight = pow(pow(dest_line_length, p) / (a + d), b);
 
@@ -1553,7 +1573,7 @@ void Cimgproc20191373View::OnGeometryWarping()
 			pDoc->Resultimg[y][x] = pDoc->Inputimg[source_y][source_x];
 			else
 			{
-				pDoc->Resultimg[y][3*x+0] = pDoc->Inputimg[source_y][3*source_x+0];
+				pDoc->Resultimg[y][3 * x + 0] = pDoc->Inputimg[source_y][3 * source_x + 0];
 				pDoc->Resultimg[y][3 * x + 1] = pDoc->Inputimg[source_y][3 * source_x + 1];
 				pDoc->Resultimg[y][3 * x + 2] = pDoc->Inputimg[source_y][3 * source_x + 2];
 				
@@ -1561,4 +1581,122 @@ void Cimgproc20191373View::OnGeometryWarping()
 
 		}
 	Invalidate();
+}
+
+
+CPoint mpos_st, mpos_end;
+
+void Cimgproc20191373View::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	mpos_st = point;
+
+	CScrollView::OnLButtonDown(nFlags, point);	//point 마우스 위치값
+}
+
+
+void Cimgproc20191373View::OnLButtonUp(UINT nFlags, CPoint point)
+{
+	mpos_end = point;
+
+	CDC *pDC = GetDC();
+	// pen생성 빨간색
+	CPen rpen;
+	rpen.CreatePen(PS_SOLID, 0, RGB(255, 0, 0));	
+	pDC->SelectObject(&rpen);
+
+	//선그리기
+	pDC->MoveTo(mpos_st);	//시작점부터
+	pDC->LineTo(mpos_end);	//종료점까지 라인그리기
+	ReleaseDC(pDC);//닫기
+
+	//제어선
+	int Ax, Ay, Bx, By;
+	Ax = mpos_st.x;
+	Ay = mpos_st.y;
+	Bx = mpos_end.x;
+	By = mpos_end.y;
+
+	if (Ax < Bx) mctrl_source.Px = Ax - (Bx - Ax) / 2; //외편시작점 좌표값 두개 간격의 절반 왼쪽으로이동
+	else		 mctrl_source.Px = Ax + (Ax - Bx) / 2;	//오른편시작점 좌표값 두개 간격의 절반 오른쪽으로이동
+
+	if (Ay < By) mctrl_source.Px = Ay - (By - Ay) / 2; 
+	else		 mctrl_source.Px = Ay + (Ay - By) / 2;	
+	//제어선 시작
+	mctrl_dest.Px = mctrl_source.Px;
+	mctrl_dest.Py = mctrl_source.Py;
+
+	//마우스 이동전
+	mctrl_source.Qx = mpos_st.x;
+	mctrl_source.Qy = mpos_st.y;
+	//마우스 이동후
+	mctrl_dest.Qx = mpos_end.x;
+	mctrl_dest.Qy = mpos_end.y;
+	
+
+	CScrollView::OnLButtonUp(nFlags, point);
+}
+
+
+void Cimgproc20191373View::OnAviView()
+{
+	CFileDialog dlg(true, "", "", OFN_HIDEREADONLY || OFN_OVERWRITEPROMPT,
+		"AVI화일(*.avi)|*.avi|모든화일|*.*|");
+
+	if (dlg.DoModal() == IDOK)
+	{
+		AVIFileName= dlg.GetPathName();
+		bAviMode = true;
+		Invalidate();
+	}
+}
+
+
+void Cimgproc20191373View::LoadAviFile(CDC* pDC)
+{
+	PAVIFILE pavi;
+	AVIFILEINFO fi;
+	int stm;
+	PAVISTREAM pstm = NULL;
+	AVISTREAMINFO si;
+	PGETFRAME pfrm = NULL;
+	int frame;
+	LPBITMAPINFOHEADER pbmpih;
+	unsigned char* image;
+	int x, y;
+
+	AVIFileInit();	//파일 초기화
+	AVIFileOpen(&pavi, AVIFileName, OF_READ | OF_SHARE_DENY_NONE, NULL);
+	AVIFileInfo(pavi, &fi, sizeof(AVIFILEINFO));
+
+	for (stm = 0; stm < fi.dwStreams; stm++)
+	{
+		AVIFileGetStream(pavi, &pstm, 0, stm);
+		AVIStreamInfo(pstm, &si, sizeof(si));
+		if (si.fccType == streamtypeVIDEO)
+		{
+			pfrm=AVIStreamGetFrameOpen(pstm, NULL);
+			for (frame = 0; frame <100 ; frame++)	//si.dwLength
+			{
+				pbmpih = (LPBITMAPINFOHEADER)AVIStreamGetFrame(pfrm, frame);
+				if (!pbmpih) continue;
+
+				image = (unsigned char*)((LPSTR)pbmpih + (WORD)pbmpih->biSize);
+				/*
+				for(y=0;y<fi.dwHeight;y++)
+					for (x = 0; x < fi.dwWidth; x++)
+					{
+						pDC->SetPixel(x, fi.dwHeight - 1 - y,
+							RGB(image[(y * fi.dwWidth + x) * 3 + 2],
+								image[(y * fi.dwWidth + x) * 3 + 1],
+								image[(y * fi.dwWidth + x) * 3 + 0]));
+					}
+				*/
+				::SetDIBitsToDevice(pDC->GetSafeHdc(), 0, 0, fi.dwWidth, fi.dwHeight,
+					0, 0, 0, fi.dwWidth,
+					image, (BITMAPINFO*)pbmpih, DIB_RGB_COLORS);
+				Sleep(30);
+			}
+		}
+	}
+
 }
