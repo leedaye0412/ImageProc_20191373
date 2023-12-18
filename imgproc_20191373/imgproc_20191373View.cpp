@@ -427,7 +427,7 @@ void Cimgproc20191373View::OnPixelminmax() //명암대비 스트레칭
 {
 	Cimgproc20191373Doc* pDoc = GetDocument();
 
-	int x, y, value;
+	int x, y;
 	int lowvalue = 255, highvalue = 0;
 
 	//최저 화소값
@@ -451,7 +451,7 @@ void Cimgproc20191373View::OnPixelminmax() //명암대비 스트레칭
 	for (y = 0; y < pDoc->ImageHeight; y++)
 		for (x = 0; x < pDoc->ImageWidth; x++)
 		{
-			pDoc->Resultimg[y][x] = (float)(pDoc->Inputimg[y][x] - lowvalue) / (highvalue - lowvalue) * 255;
+			pDoc->Resultimg[y][x] =(float)(pDoc->Inputimg[y][x] - lowvalue) / (highvalue - lowvalue) * 255;
 		}
 
 	Invalidate();
@@ -890,28 +890,103 @@ void Cimgproc20191373View::OnRegionMedianFiltering()
 	for (y = 1; y < pDoc->ImageHeight-1; y++)
 		for (x = 1; x < pDoc->ImageWidth-1; x++)
 		{
-			n[0] = pDoc->Inputimg[y - 1][x - 1];
-			n[1] = pDoc->Inputimg[y - 1][x - 0];
-			n[2] = pDoc->Inputimg[y - 1][x + 1];
-			n[3] = pDoc->Inputimg[y - 0][x - 1];
-			n[4] = pDoc->Inputimg[y - 0][x - 0];
-			n[5] = pDoc->Inputimg[y - 0][x + 1];
-			n[6] = pDoc->Inputimg[y + 1][x - 1];
-			n[7] = pDoc->Inputimg[y + 1][x - 0];
-			n[8] = pDoc->Inputimg[y + 1][x + 1];
+			if (pDoc->depth == 1)
+			{
+				n[0] = pDoc->Inputimg[y - 1][x - 1];
+				n[1] = pDoc->Inputimg[y - 1][x - 0];
+				n[2] = pDoc->Inputimg[y - 1][x + 1];
+				n[3] = pDoc->Inputimg[y - 0][x - 1];
+				n[4] = pDoc->Inputimg[y - 0][x - 0];
+				n[5] = pDoc->Inputimg[y - 0][x + 1];
+				n[6] = pDoc->Inputimg[y + 1][x - 1];
+				n[7] = pDoc->Inputimg[y + 1][x - 0];
+				n[8] = pDoc->Inputimg[y + 1][x + 1];
 
-			//버블소팅(오름차순)
-			for(i=8;i>0;i--)
-				for (j = 0; j < i; j++)
-				{
-					if (n[j] > n[j + 1])
+				//버블소팅(오름차순)
+				for (i = 8; i > 0; i--)
+					for (j = 0; j < i; j++)
 					{
-						temp = n[j + 1];
-						n[j + 1] = n[j];
-						n[j] = temp;
+						if (n[j] > n[j + 1])
+						{
+							temp = n[j + 1];
+							n[j + 1] = n[j];
+							n[j] = temp;
+						}
 					}
-				}
-			pDoc->Resultimg[y][x] = n[4];
+				pDoc->Resultimg[y][x] = n[4];
+			}
+			else
+			{
+				n[0] = pDoc->Inputimg[y - 1][3*(x - 1)+0];
+				n[1] = pDoc->Inputimg[y - 1][3*(x - 0)+0];
+				n[2] = pDoc->Inputimg[y - 1][3*(x + 1)+0];
+				n[3] = pDoc->Inputimg[y - 0][3*(x - 1)+0];
+				n[4] = pDoc->Inputimg[y - 0][3*(x - 0)+0];
+				n[5] = pDoc->Inputimg[y - 0][3*(x + 1)+0];
+				n[6] = pDoc->Inputimg[y + 1][3*(x - 1)+0];
+				n[7] = pDoc->Inputimg[y + 1][3*(x - 0)+0];
+				n[8] = pDoc->Inputimg[y + 1][3*(x + 1)+0];
+
+				//버블소팅(오름차순)
+				for (i = 8; i > 0; i--)
+					for (j = 0; j < i; j++)
+					{
+						if (n[j] > n[j + 1])
+						{
+							temp = n[j + 1];
+							n[j + 1] = n[j];
+							n[j] = temp;
+						}
+					}
+				pDoc->Resultimg[y][3*x+0] = n[4];
+
+				n[0] = pDoc->Inputimg[y - 1][3 * (x - 1) + 1];
+				n[1] = pDoc->Inputimg[y - 1][3 * (x - 0) + 1];
+				n[2] = pDoc->Inputimg[y - 1][3 * (x + 1) + 1];
+				n[3] = pDoc->Inputimg[y - 0][3 * (x - 1) + 1];
+				n[4] = pDoc->Inputimg[y - 0][3 * (x - 0) + 1];
+				n[5] = pDoc->Inputimg[y - 0][3 * (x + 1) + 1];
+				n[6] = pDoc->Inputimg[y + 1][3 * (x - 1) + 1];
+				n[7] = pDoc->Inputimg[y + 1][3 * (x - 0) + 1];
+				n[8] = pDoc->Inputimg[y + 1][3 * (x + 1) + 1];
+
+				//버블소팅(오름차순)
+				for (i = 8; i > 0; i--)
+					for (j = 0; j < i; j++)
+					{
+						if (n[j] > n[j + 1])
+						{
+							temp = n[j + 1];
+							n[j + 1] = n[j];
+							n[j] = temp;
+						}
+					}
+				pDoc->Resultimg[y][3 * x + 1] = n[4];
+
+
+				n[0] = pDoc->Inputimg[y - 1][3 * (x - 1) + 2];
+				n[1] = pDoc->Inputimg[y - 1][3 * (x - 0) + 2];
+				n[2] = pDoc->Inputimg[y - 1][3 * (x + 1) + 2];
+				n[3] = pDoc->Inputimg[y - 0][3 * (x - 1) + 2];
+				n[4] = pDoc->Inputimg[y - 0][3 * (x - 0) + 2];
+				n[5] = pDoc->Inputimg[y - 0][3 * (x + 1) + 2];
+				n[6] = pDoc->Inputimg[y + 1][3 * (x - 1) + 2];
+				n[7] = pDoc->Inputimg[y + 1][3 * (x - 0) + 2];
+				n[8] = pDoc->Inputimg[y + 1][3 * (x + 1) + 2];
+
+				//버블소팅(오름차순)
+				for (i = 8; i > 0; i--)
+					for (j = 0; j < i; j++)
+					{
+						if (n[j] > n[j + 1])
+						{
+							temp = n[j + 1];
+							n[j + 1] = n[j];
+							n[j] = temp;
+						}
+					}
+				pDoc->Resultimg[y][3 * x + 2] = n[4];
+			}
 	
 		}
 	Invalidate();
@@ -1311,8 +1386,8 @@ void Cimgproc20191373View::OnGeometryZoomoutAvgSampling()
 	}
 
 	//전방향 사상
-	for (y = 0; y < pDoc->ImageHeight; y+=yscale)
-		for (x = 0; x < pDoc->ImageWidth; x+=xscale)
+	for (y = 0; y < pDoc->ImageHeight-yscale; y+=yscale)
+		for (x = 0; x < pDoc->ImageWidth-xscale; x+=xscale)
 		{
 			sum = 0; rsum = 0; gsum = 0; bsum = 0;
 			for(j=0;j<yscale;j++)
@@ -1598,35 +1673,40 @@ void Cimgproc20191373View::OnLButtonUp(UINT nFlags, CPoint point)
 {
 	mpos_end = point;
 
-	CDC* pDC = GetDC();
-	CPen pen;
-	pen.CreatePen(PS_SOLID, 0, RGB(255, 0, 0));
-	pDC->SelectObject(&pen);
+	CDC *pDC = GetDC();
+	// pen생성 빨간색
+	CPen rpen;
+	rpen.CreatePen(PS_SOLID, 0, RGB(255, 0, 0));	
+	pDC->SelectObject(&rpen);
 
-	pDC->MoveTo(mpos_st);
-	pDC->LineTo(mpos_end);
-	ReleaseDC(pDC);
+	//선그리기
+	pDC->MoveTo(mpos_st);	//시작점부터
+	pDC->LineTo(mpos_end);	//종료점까지 라인그리기
+	ReleaseDC(pDC);//닫기
 
+	//제어선
 	int Ax, Ay, Bx, By;
 	Ax = mpos_st.x;
 	Ay = mpos_st.y;
 	Bx = mpos_end.x;
 	By = mpos_end.y;
 
-	if (Ax < Bx)	mctrl_source.Px = Ax - (Bx - Ax) / 2;
-	else				mctrl_source.Px = Ax + (Ax - Bx) / 2;
+	if (Ax < Bx) mctrl_source.Px = Ax - (Bx - Ax) / 2; //외편시작점 좌표값 두개 간격의 절반 왼쪽으로이동
+	else		 mctrl_source.Px = Ax + (Ax - Bx) / 2;	//오른편시작점 좌표값 두개 간격의 절반 오른쪽으로이동
 
-	if (Ay < By)	mctrl_source.Py = Ay - (By - Ay) / 2;
-	else				mctrl_source.Py = Ay + (Ay - By) / 2;
-
-	// 기준위치
+	if (Ay < By) mctrl_source.Py = Ay - (By - Ay) / 2; 
+	else		 mctrl_source.Py = Ay + (Ay - By) / 2;	
+	//제어선 시작
 	mctrl_dest.Px = mctrl_source.Px;
 	mctrl_dest.Py = mctrl_source.Py;
 
+	//마우스 이동전
 	mctrl_source.Qx = mpos_st.x;
 	mctrl_source.Qy = mpos_st.y;
+	//마우스 이동후
 	mctrl_dest.Qx = mpos_end.x;
 	mctrl_dest.Qy = mpos_end.y;
+	
 
 	CScrollView::OnLButtonUp(nFlags, point);
 }
